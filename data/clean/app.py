@@ -4,34 +4,34 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 # ==========================================
-# 1. PAGE CONFIG & VANGUARD PALETTE
+# 1. PAGE CONFIG & COLOR PALETTE
 # ==========================================
-st.set_page_config(page_title="Vanguard A/B Test Dashboard", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Vanguard A-B Test Dashboard", layout="wide", initial_sidebar_state="expanded")
 
-# Strict Vanguard Colors
+# Define Vanguard Color scheme
 COLOR_MAP = {'Control': '#3D3D4E', 'Test': '#C41230'}
-BG_COLOR = '#E5E7EB' # Platinum Reserve for gridlines/backgrounds
+BG_COLOR = '#E5E7EB' # Platinum for gridlines & backgrounds
 
-st.title("📊 Vanguard Digital Experience: A/B Test Results")
-st.markdown("### *The Trade-Off: Increased Completion vs. Increased Friction*")
+st.title("📊 Vanguard A/B Test Results")
+st.markdown("### *A Quantitative Analysis of Vanguard UI Redesign*")
 st.markdown("---")
 
 # ==========================================
-# 2. DATA LOADING (Cached for Speed)
+# 2. LOAD DATA
 # ==========================================
 @st.cache_data
 def load_data():
-    # Load your master client table
+    # Load client table
     try:
         df = pd.read_csv('client_kpi_table.csv')
     except FileNotFoundError:
-        st.error("⚠️ `client_kpi_table.csv` not found. Please ensure it is in the same folder as this script.")
+        st.error("⚠️ File not found.")
         st.stop()
         
     # Clean Variation column just in case
     df = df.dropna(subset=['Variation'])
     
-    # Ensure completion_rate and error_rate are numeric (1/0) for math
+    # Cast completion_rate & error_rate to numeric (1/0) .astype()
     if df['completion_rate'].dtype == bool:
         df['completion_rate'] = df['completion_rate'].astype(int)
     if df['error_rate'].dtype == bool:
@@ -39,31 +39,47 @@ def load_data():
         
     return df
 
-df_master = load_data()
+df_main = load_data()
 
 # ==========================================
 # 3. SIDEBAR FILTERS (Global)
 # ==========================================
 st.sidebar.header("Global Filters")
 
-# Age Filter
-min_age, max_age = int(df_master['clnt_age'].min()), int(df_master['clnt_age'].max())
+# 1. Age Filter
+min_age, max_age = int(df_main['clnt_age'].min()), int(df_main['clnt_age'].max())
 age_range = st.sidebar.slider("Client Age", min_age, max_age, (min_age, max_age))
 
-# Gender Filter
-gender_options = df_master['gendr'].dropna().unique().tolist()
+# 2. Gender Filter
+gender_options = df_main['gendr'].dropna().unique().tolist()
 selected_genders = st.sidebar.multiselect("Gender", gender_options, default=gender_options)
 
-# Apply Filters
-df_filtered = df_master[
-    (df_master['clnt_age'] >= age_range[0]) & 
-    (df_master['clnt_age'] <= age_range[1]) &
-    (df_master['gendr'].isin(selected_genders))
+# 3. Tenure Filter (Months)
+min_tenure, max_tenure = int(df_main['clnt_tenure_mnth'].min()), int(df_main['clnt_tenure_mnth'].max())
+tenure_range = st.sidebar.slider("Tenure (Months)", min_tenure, max_tenure, (min_tenure, max_tenure))
+
+# 4. Balance Filter (Using numeric inputs because of "Whale" outliers)
+st.sidebar.subheader("Account Balance")
+min_bal = float(df_main['bal'].min())
+max_bal = float(df_main['bal'].max())
+bal_low = st.sidebar.number_input("Min Balance ($)", value=min_bal, step=1000.0)
+bal_high = st.sidebar.number_input("Max Balance ($)", value=max_bal, step=1000.0)
+
+# APPLY FILTERS
+df_filtered = df_main[
+    (df_main['clnt_age'] >= age_range[0]) & 
+    (df_main['clnt_age'] <= age_range[1]) &
+    (df_main['gendr'].isin(selected_genders)) &
+    (df_main['clnt_tenure_mnth'] >= tenure_range[0]) &
+    (df_main['clnt_tenure_mnth'] <= tenure_range[1]) &
+    (df_main['bal'] >= bal_low) &
+    (df_main['bal'] <= bal_high)
 ]
 
 # ==========================================
-# 4. TOPLINE METRICS (The Headline Story)
+# 4. A/B METRICS 
 # ==========================================
+
 # Calculate overall metrics per group
 summary = df_filtered.groupby('Variation').agg(
     comp_rate=('completion_rate', 'mean'),
@@ -72,7 +88,7 @@ summary = df_filtered.groupby('Variation').agg(
     avg_steps=('avg_steps_client', 'mean')
 ).reset_index()
 
-# Extract values for Delta comparison
+# Get percentages for Delta comparison
 try:
     test_comp = summary.loc[summary['Variation'] == 'Test', 'comp_rate'].values[0] * 100
     ctrl_comp = summary.loc[summary['Variation'] == 'Control', 'comp_rate'].values[0] * 100
@@ -83,7 +99,7 @@ try:
     test_err = summary.loc[summary['Variation'] == 'Test', 'err_rate'].values[0] * 100
     ctrl_err = summary.loc[summary['Variation'] == 'Control', 'err_rate'].values[0] * 100
 except IndexError:
-    st.warning("Not enough data with current filters.")
+    st.warning("Not enough data with current filter.")
     st.stop()
 
 col1, col2, col3 = st.columns(3)
@@ -98,14 +114,14 @@ with col3:
 st.markdown("---")
 
 # ==========================================
-# 5. SECTION 1: CORE OUTCOME (The Win)
+# 5. SECTION 1: CORE OUTCOMES
 # ==========================================
-st.subheader("Section 1: The Primary Outcome (Completion)")
+st.subheader("Section 1: Completion Rates by A/B Group")
 
 fig_comp = px.bar(
     summary, x='Variation', y='comp_rate', color='Variation',
     color_discrete_map=COLOR_MAP, text_auto='.1%',
-    title="Frictionless Completion Rate by Group",
+    title="Frictionless Completion Rate by A/B Group",
     labels={'comp_rate': 'Completion Rate'}
 )
 fig_comp.update_layout(yaxis_tickformat='.0%', showlegend=False)
@@ -114,10 +130,11 @@ st.plotly_chart(fig_comp, use_container_width=True)
 st.markdown("---")
 
 # ==========================================
-# 6. SECTION 2: THE TRADE-OFF (The Cost)
+# 6. SECTION 2: WINS & TRADE-OFFS
 # ==========================================
-st.subheader("Section 2: The Friction Cost")
-st.markdown("The Test group achieved higher completion, but required more time, more steps, and experienced more errors.")
+st.subheader("Section 2: The Cost of Friction")
+
+st.markdown("The Test group achieved higher completion rates than the Control group, but took more time and more steps, and experienced more errors.")
 
 c1, c2, c3 = st.columns(3)
 
@@ -125,7 +142,7 @@ c1, c2, c3 = st.columns(3)
 fig_time = px.bar(
     summary, x='Variation', y='avg_time', color='Variation',
     color_discrete_map=COLOR_MAP, text_auto='.0f',
-    title="Avg Time to Completion (s)"
+    title="Avg Time to Completion (in s)"
 )
 fig_time.update_layout(showlegend=False)
 c1.plotly_chart(fig_time, use_container_width=True)
@@ -143,7 +160,7 @@ c2.plotly_chart(fig_steps, use_container_width=True)
 fig_err = px.bar(
     summary, x='Variation', y='err_rate', color='Variation',
     color_discrete_map=COLOR_MAP, text_auto='.1%',
-    title="Friction / Error Rate"
+    title="Error Rate"
 )
 fig_err.update_layout(yaxis_tickformat='.0%', showlegend=False)
 c3.plotly_chart(fig_err, use_container_width=True)
@@ -151,14 +168,15 @@ c3.plotly_chart(fig_err, use_container_width=True)
 st.markdown("---")
 
 # ==========================================
-# 7. SECTION 3: DEMOGRAPHIC BIAS CHECK
+# 7. SECTION 3: RELIABILITY CHECKS
 # ==========================================
-st.subheader("Methodology: Pre-Flight Bias Check")
-st.markdown("Confirming the A/B test was fair by checking demographic distributions.")
+st.subheader("Section 3: A/B Group Bias Check")
+
+st.markdown("Shows the key metrics and statistics to assess the reliability of the A/B test.")
 
 col_a, col_b = st.columns(2)
 
-# Age Distribution (KDE / Histogram)
+# Age Distribution (KDE/Histogram)
 fig_age = px.histogram(
     df_filtered, x='clnt_age', color='Variation', barmode='overlay',
     color_discrete_map=COLOR_MAP, nbins=30, opacity=0.7,
@@ -175,4 +193,3 @@ fig_bal = px.box(
 )
 fig_bal.update_layout(showlegend=False)
 col_b.plotly_chart(fig_bal, use_container_width=True)
-
