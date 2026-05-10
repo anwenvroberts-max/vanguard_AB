@@ -1,0 +1,2067 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0410.0924                               -->
+<workbook original-version='18.1' source-build='2026.1.1 (20261.26.0410.0924)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+    <color-palette custom='true' name='Vanguard_Palette' type='regular'>
+      <color>#3d3d4e</color>
+      <color>#c41230</color>
+      <color>#e5e7eb</color>
+      <color>#b91c1c</color>
+      <color>#ffaaaa</color>
+      <color>#fee2e2</color>
+      <color>#fef3c7</color>
+    </color-palette>
+  </preferences>
+  <datasources>
+    <datasource caption='client_kpi_table' inline='true' name='federated.1di5v8305i5bav18t4v0w044l5rw' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='client_kpi_table' name='textscan.0kds6xz15a823v17z1b5i1pt1ljn'>
+            <connection class='textscan' directory='C:/Users/Kornbichler/Desktop/VANGUARD_LATEST' filename='client_kpi_table.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0kds6xz15a823v17z1b5i1pt1ljn' name='client_kpi_table.csv' table='[client_kpi_table#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='integer' name='client_id' ordinal='0' />
+            <column datatype='real' name='clnt_tenure_mnth' ordinal='1' />
+            <column datatype='real' name='clnt_age' ordinal='2' />
+            <column datatype='string' name='gendr' ordinal='3' />
+            <column datatype='real' name='num_accts' ordinal='4' />
+            <column datatype='real' name='bal' ordinal='5' />
+            <column datatype='real' name='calls_6_mnth' ordinal='6' />
+            <column datatype='real' name='logons_6_mnth' ordinal='7' />
+            <column datatype='string' name='Variation' ordinal='8' />
+            <column datatype='integer' name='session_per_client' ordinal='9' />
+            <column datatype='integer' name='max_step_client' ordinal='10' />
+            <column datatype='real' name='completion_rate' ordinal='11' />
+            <column datatype='real' name='avg_steps_client' ordinal='12' />
+            <column datatype='real' name='error_rate' ordinal='13' />
+            <column datatype='real' name='avg_time_to_completion' ordinal='14' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[client_kpi_table.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>client_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[client_id]</local-name>
+            <parent-name>[client_kpi_table.csv]</parent-name>
+            <remote-alias>client_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clnt_tenure_mnth</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[clnt_tenure_mnth]</local-name>
+            <parent-name>[client_kpi_table.csv]</parent-name>
+            <remote-alias>clnt_tenure_mnth</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clnt_age</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[clnt_age]</local-name>
+            <parent-name>[client_kpi_table.csv]</parent-name>
+            <remote-alias>clnt_age</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gendr</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gendr]</local-name>
+            <parent-name>[client_kpi_table.csv]</parent-name>
+            <remote-alias>gendr</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_accts</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[num_accts]</local-name>
+            <parent-name>[client_kpi_table.csv]</parent-name>
+            <remote-alias>num_accts</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bal</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[bal]</local-name>
+            <parent-name>[client_kpi_table.csv]</parent-name>
+            <remote-alias>bal</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>calls_6_mnth</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[calls_6_mnth]</local-name>
+            <parent-name>[client_kpi_table.csv]</parent-name>
+            <remote-alias>calls_6_mnth</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>logons_6_mnth</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[logons_6_mnth]</local-name>
+            <parent-name>[client_kpi_table.csv]</parent-name>
+            <remote-alias>logons_6_mnth</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Variation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Variation]</local-name>
+            <parent-name>[client_kpi_table.csv]</parent-name>
+            <remote-alias>Variation</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>session_per_client</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[session_per_client]</local-name>
+            <parent-name>[client_kpi_table.csv]</parent-name>
+            <remote-alias>session_per_client</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>max_step_client</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[max_step_client]</local-name>
+            <parent-name>[client_kpi_table.csv]</parent-name>
+            <remote-alias>max_step_client</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>completion_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[completion_rate]</local-name>
+            <parent-name>[client_kpi_table.csv]</parent-name>
+            <remote-alias>completion_rate</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_steps_client</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_steps_client]</local-name>
+            <parent-name>[client_kpi_table.csv]</parent-name>
+            <remote-alias>avg_steps_client</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>error_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[error_rate]</local-name>
+            <parent-name>[client_kpi_table.csv]</parent-name>
+            <remote-alias>error_rate</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_time_to_completion</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_time_to_completion]</local-name>
+            <parent-name>[client_kpi_table.csv]</parent-name>
+            <remote-alias>avg_time_to_completion</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Completion Rate AVG' datatype='real' default-format='p0.0%' name='[Calculation_2404906897215488]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG(FLOAT([completion_rate]))' />
+      </column>
+      <column caption='Completion Time AVG' datatype='real' default-format='p0.0%' name='[Calculation_2404906899681281]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG([avg_time_to_completion])' />
+      </column>
+      <column caption='Error Rate AVG Float' datatype='real' default-format='p0.0%' name='[Calculation_2404906899873794]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG(FLOAT([error_rate]))' />
+      </column>
+      <column caption='Frictionless Confirm' datatype='real' name='[Calculation_2404906916904964]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(INT([reached_confirm])) / COUNTD([client_id])' />
+      </column>
+      <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+      <column caption='client_kpi_table.csv' datatype='table' name='[__tableau_internal_object_id__].[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]' role='measure' type='quantitative' />
+      <column caption='Avg Steps Client' datatype='real' name='[avg_steps_client]' role='measure' type='quantitative' />
+      <column caption='Avg Time To Completion' datatype='real' name='[avg_time_to_completion]' role='measure' type='quantitative' />
+      <column caption='Bal' datatype='real' name='[bal]' role='measure' type='quantitative' />
+      <column caption='Calls 6 Mnth' datatype='real' name='[calls_6_mnth]' role='measure' type='quantitative' />
+      <column caption='Client Id' datatype='integer' name='[client_id]' role='dimension' type='ordinal' />
+      <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+      <column caption='Clnt Tenure Mnth' datatype='real' name='[clnt_tenure_mnth]' role='measure' type='quantitative' />
+      <column caption='Completion Rate' datatype='real' name='[completion_rate]' role='measure' type='quantitative' />
+      <column caption='Error Rate' datatype='real' name='[error_rate]' role='measure' type='quantitative' />
+      <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+      <column caption='Logons 6 Mnth' datatype='real' name='[logons_6_mnth]' role='measure' type='quantitative' />
+      <column caption='Max Step Client' datatype='integer' name='[max_step_client]' role='measure' type='quantitative' />
+      <column caption='Num Accts' datatype='real' name='[num_accts]' role='measure' type='quantitative' />
+      <column caption='Reached Confirm' datatype='boolean' name='[reached_confirm]' role='dimension' type='nominal' />
+      <column caption='Session Per Client' datatype='integer' name='[session_per_client]' role='measure' type='quantitative' />
+      <column caption='Time On Each Step' datatype='real' name='[time_on_each_step]' role='measure' type='quantitative' />
+      <column-instance column='[error_rate]' derivation='Count' name='[cnt:error_rate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+      <column-instance column='[error_rate]' derivation='Sum' name='[sum:error_rate:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='Data/TableauTemp/#TableauTemp_1ci2cyv19ktcwl166xfvn0yz32nd.hyper' default-settings='yes' schema='Extract' sslmode='' update-time='05/10/2026 12:31:04 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='client_kpi_table' increment-value='%null%' refresh-type='create' rows-inserted='50487' timestamp-start='2026-05-10 12:31:03.339' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>client_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[client_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>client_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>client_kpi_table.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50487</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>clnt_tenure_mnth</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[clnt_tenure_mnth]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>clnt_tenure_mnth</remote-alias>
+              <ordinal>1</ordinal>
+              <family>client_kpi_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>836</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>clnt_age</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[clnt_age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>clnt_age</remote-alias>
+              <ordinal>2</ordinal>
+              <family>client_kpi_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>208</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gendr</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gendr]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gendr</remote-alias>
+              <ordinal>3</ordinal>
+              <family>client_kpi_table.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>num_accts</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[num_accts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>num_accts</remote-alias>
+              <ordinal>4</ordinal>
+              <family>client_kpi_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bal</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[bal]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bal</remote-alias>
+              <ordinal>5</ordinal>
+              <family>client_kpi_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50487</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>calls_6_mnth</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[calls_6_mnth]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>calls_6_mnth</remote-alias>
+              <ordinal>6</ordinal>
+              <family>client_kpi_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>logons_6_mnth</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[logons_6_mnth]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>logons_6_mnth</remote-alias>
+              <ordinal>7</ordinal>
+              <family>client_kpi_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Variation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Variation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Variation</remote-alias>
+              <ordinal>8</ordinal>
+              <family>client_kpi_table.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>session_per_client</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[session_per_client]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>session_per_client</remote-alias>
+              <ordinal>9</ordinal>
+              <family>client_kpi_table.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>max_step_client</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[max_step_client]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>max_step_client</remote-alias>
+              <ordinal>10</ordinal>
+              <family>client_kpi_table.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>completion_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[completion_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>completion_rate</remote-alias>
+              <ordinal>11</ordinal>
+              <family>client_kpi_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_steps_client</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_steps_client]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_steps_client</remote-alias>
+              <ordinal>12</ordinal>
+              <family>client_kpi_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>143</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>error_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[error_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>error_rate</remote-alias>
+              <ordinal>13</ordinal>
+              <family>client_kpi_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_time_to_completion</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_time_to_completion]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_time_to_completion</remote-alias>
+              <ordinal>14</ordinal>
+              <family>client_kpi_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1551</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='100' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Variation:nk]' palette='Vanguard_Palette' type='palette'>
+            <map to='#3d3d4e'>
+              <bucket>&quot;Control&quot;</bucket>
+            </map>
+            <map to='#c41230'>
+              <bucket>&quot;Test&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>%null%</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1di5v8305i5bav18t4v0w044l5rw].[cnt:error_rate:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1di5v8305i5bav18t4v0w044l5rw].[sum:error_rate:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Germany&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='client_id' />
+        <field-sort-custom-order field='clnt_tenure_mnth' />
+        <field-sort-custom-order field='clnt_age' />
+        <field-sort-custom-order field='Calculation_2404906899681281' />
+        <field-sort-custom-order field='Calculation_2404906916904964' />
+        <field-sort-custom-order field='gendr' />
+        <field-sort-custom-order field='num_accts' />
+        <field-sort-custom-order field='bal' />
+        <field-sort-custom-order field='calls_6_mnth' />
+        <field-sort-custom-order field='logons_6_mnth' />
+        <field-sort-custom-order field='Variation' />
+        <field-sort-custom-order field='session_per_client' />
+        <field-sort-custom-order field='max_step_client' />
+        <field-sort-custom-order field='completion_rate' />
+        <field-sort-custom-order field='avg_steps_client' />
+        <field-sort-custom-order field='error_rate' />
+        <field-sort-custom-order field='avg_time_to_completion' />
+        <field-sort-custom-order field='Calculation_2404906899873794' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='client_kpi_table.csv' id='client_kpi_table.csv_B259D0B2E6A8486294A86F2C857C8B79'>
+            <properties context=''>
+              <relation connection='textscan.0kds6xz15a823v17z1b5i1pt1ljn' name='client_kpi_table.csv' table='[client_kpi_table#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='integer' name='client_id' ordinal='0' />
+                  <column datatype='real' name='clnt_tenure_mnth' ordinal='1' />
+                  <column datatype='real' name='clnt_age' ordinal='2' />
+                  <column datatype='string' name='gendr' ordinal='3' />
+                  <column datatype='real' name='num_accts' ordinal='4' />
+                  <column datatype='real' name='bal' ordinal='5' />
+                  <column datatype='real' name='calls_6_mnth' ordinal='6' />
+                  <column datatype='real' name='logons_6_mnth' ordinal='7' />
+                  <column datatype='string' name='Variation' ordinal='8' />
+                  <column datatype='integer' name='session_per_client' ordinal='9' />
+                  <column datatype='integer' name='max_step_client' ordinal='10' />
+                  <column datatype='real' name='completion_rate' ordinal='11' />
+                  <column datatype='real' name='avg_steps_client' ordinal='12' />
+                  <column datatype='real' name='error_rate' ordinal='13' />
+                  <column datatype='real' name='avg_time_to_completion' ordinal='14' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.1di5v8305i5bav18t4v0w044l5rw'>
+      <datasources>
+        <datasource caption='client_kpi_table' name='federated.1di5v8305i5bav18t4v0w044l5rw' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1di5v8305i5bav18t4v0w044l5rw'>
+        <column caption='Bal' datatype='real' name='[bal]' role='measure' type='quantitative' />
+        <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+        <column caption='Clnt Tenure Mnth' datatype='real' name='[clnt_tenure_mnth]' role='measure' type='quantitative' />
+        <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+        <column-instance column='[bal]' derivation='None' name='[none:bal:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[clnt_age]' derivation='None' name='[none:clnt_age:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[clnt_tenure_mnth]' derivation='None' name='[none:clnt_tenure_mnth:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='quantitative' column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:bal:qk]' included-values='in-range'>
+        <min>23789.439999999999</min>
+        <max>16320040.15</max>
+      </filter>
+      <filter class='quantitative' column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_age:qk]' included-values='in-range'>
+        <min>17.0</min>
+        <max>96.0</max>
+      </filter>
+      <filter class='quantitative' column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_tenure_mnth:qk]' included-values='in-range'>
+        <min>33.0</min>
+        <max>669.0</max>
+      </filter>
+      <filter class='categorical' column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:gendr:nk]'>
+        <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+          <groupfilter function='member' level='[none:gendr:nk]' member='&quot;F&quot;' />
+          <groupfilter function='member' level='[none:gendr:nk]' member='&quot;M&quot;' />
+          <groupfilter function='member' level='[none:gendr:nk]' member='&quot;U&quot;' />
+        </groupfilter>
+      </filter>
+    </shared-view>
+  </shared-views>
+  <worksheets>
+    <worksheet name='Avg Age A/B'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Avg Age A/B</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='client_kpi_table' name='federated.1di5v8305i5bav18t4v0w044l5rw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1di5v8305i5bav18t4v0w044l5rw'>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column-instance column='[clnt_age]' derivation='Avg' name='[avg:clnt_age:qk]' pivot='key' type='quantitative' />
+            <column caption='Bal' datatype='real' name='[bal]' role='measure' type='quantitative' />
+            <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+            <column caption='Clnt Tenure Mnth' datatype='real' name='[clnt_tenure_mnth]' role='measure' type='quantitative' />
+            <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[bal]' derivation='None' name='[none:bal:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_age]' derivation='None' name='[none:clnt_age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_tenure_mnth]' derivation='None' name='[none:clnt_tenure_mnth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Control&quot;</bucket>
+              <bucket>&quot;Test&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:bal:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_age:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_tenure_mnth:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:gendr:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1di5v8305i5bav18t4v0w044l5rw].[avg:clnt_age:qk]</rows>
+        <cols>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]</cols>
+      </table>
+      <simple-id uuid='{832D2CB5-EEA2-49AA-A487-8064046A4AF9}' />
+    </worksheet>
+    <worksheet name='Avg Balance A/B'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Avg Balance A/B</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='client_kpi_table' name='federated.1di5v8305i5bav18t4v0w044l5rw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1di5v8305i5bav18t4v0w044l5rw'>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column-instance column='[bal]' derivation='Avg' name='[avg:bal:qk]' pivot='key' type='quantitative' />
+            <column caption='Bal' datatype='real' name='[bal]' role='measure' type='quantitative' />
+            <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+            <column caption='Clnt Tenure Mnth' datatype='real' name='[clnt_tenure_mnth]' role='measure' type='quantitative' />
+            <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[bal]' derivation='None' name='[none:bal:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_age]' derivation='None' name='[none:clnt_age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_tenure_mnth]' derivation='None' name='[none:clnt_tenure_mnth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:bal:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_age:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_tenure_mnth:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:gendr:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1di5v8305i5bav18t4v0w044l5rw].[avg:bal:qk]</rows>
+        <cols>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]</cols>
+      </table>
+      <simple-id uuid='{E364F7D1-F088-4DC3-9043-F6DC27864734}' />
+    </worksheet>
+    <worksheet name='Avg Step Error A/B'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='client_kpi_table' name='federated.1di5v8305i5bav18t4v0w044l5rw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1di5v8305i5bav18t4v0w044l5rw'>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column-instance column='[completion_rate]' derivation='Avg' name='[avg:completion_rate:qk]' pivot='key' type='quantitative' />
+            <column caption='Bal' datatype='real' name='[bal]' role='measure' type='quantitative' />
+            <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+            <column caption='Clnt Tenure Mnth' datatype='real' name='[clnt_tenure_mnth]' role='measure' type='quantitative' />
+            <column caption='Completion Rate' datatype='real' name='[completion_rate]' role='measure' type='quantitative' />
+            <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[bal]' derivation='None' name='[none:bal:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_age]' derivation='None' name='[none:clnt_age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_tenure_mnth]' derivation='None' name='[none:clnt_tenure_mnth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:bal:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_age:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_tenure_mnth:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:gendr:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1di5v8305i5bav18t4v0w044l5rw].[avg:completion_rate:qk]</rows>
+        <cols>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]</cols>
+      </table>
+      <simple-id uuid='{6D65AE71-7024-4881-A9D5-71638915B630}' />
+    </worksheet>
+    <worksheet name='Avg Step Error A/B.'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='client_kpi_table' name='federated.1di5v8305i5bav18t4v0w044l5rw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1di5v8305i5bav18t4v0w044l5rw'>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column-instance column='[avg_steps_client]' derivation='Avg' name='[avg:avg_steps_client:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Steps Client' datatype='real' name='[avg_steps_client]' role='measure' type='quantitative' />
+            <column caption='Bal' datatype='real' name='[bal]' role='measure' type='quantitative' />
+            <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+            <column caption='Clnt Tenure Mnth' datatype='real' name='[clnt_tenure_mnth]' role='measure' type='quantitative' />
+            <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[bal]' derivation='None' name='[none:bal:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_age]' derivation='None' name='[none:clnt_age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_tenure_mnth]' derivation='None' name='[none:clnt_tenure_mnth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:bal:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_age:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_tenure_mnth:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:gendr:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]</rows>
+        <cols>[federated.1di5v8305i5bav18t4v0w044l5rw].[avg:avg_steps_client:qk]</cols>
+      </table>
+      <simple-id uuid='{60A5F022-AB6E-4134-80AB-67ABC6355AB0}' />
+    </worksheet>
+    <worksheet name='Avg Tenure A/B'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Avg Tenure (in months)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='client_kpi_table' name='federated.1di5v8305i5bav18t4v0w044l5rw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1di5v8305i5bav18t4v0w044l5rw'>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column-instance column='[clnt_tenure_mnth]' derivation='Avg' name='[avg:clnt_tenure_mnth:qk]' pivot='key' type='quantitative' />
+            <column caption='Bal' datatype='real' name='[bal]' role='measure' type='quantitative' />
+            <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+            <column caption='Clnt Tenure Mnth' datatype='real' name='[clnt_tenure_mnth]' role='measure' type='quantitative' />
+            <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[bal]' derivation='None' name='[none:bal:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_age]' derivation='None' name='[none:clnt_age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_tenure_mnth]' derivation='None' name='[none:clnt_tenure_mnth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:bal:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_age:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_tenure_mnth:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:gendr:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]</rows>
+        <cols>[federated.1di5v8305i5bav18t4v0w044l5rw].[avg:clnt_tenure_mnth:qk]</cols>
+      </table>
+      <simple-id uuid='{C913DA09-CFFB-43F0-AF50-4A2939FDE4BB}' />
+    </worksheet>
+    <worksheet name='Completion Rate in % A/B'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Completion Rate in percent A/B</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='client_kpi_table' name='federated.1di5v8305i5bav18t4v0w044l5rw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1di5v8305i5bav18t4v0w044l5rw'>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column caption='Bal' datatype='real' name='[bal]' role='measure' type='quantitative' />
+            <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+            <column caption='Clnt Tenure Mnth' datatype='real' name='[clnt_tenure_mnth]' role='measure' type='quantitative' />
+            <column caption='Completion Rate' datatype='real' name='[completion_rate]' role='measure' type='quantitative' />
+            <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[bal]' derivation='None' name='[none:bal:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_age]' derivation='None' name='[none:clnt_age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_tenure_mnth]' derivation='None' name='[none:clnt_tenure_mnth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+            <column-instance column='[completion_rate]' derivation='Sum' name='[pcto:sum:completion_rate:qk:5]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.1di5v8305i5bav18t4v0w044l5rw].[Variation]' ordering-type='Field' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_age:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:gendr:nk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_tenure_mnth:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:bal:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' value='151' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1di5v8305i5bav18t4v0w044l5rw].[pcto:sum:completion_rate:qk:5]</rows>
+        <cols>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]</cols>
+      </table>
+      <simple-id uuid='{1A02BADC-131B-4798-87B5-ACBCD2E84DAB}' />
+    </worksheet>
+    <worksheet name='Completion Rate in % A/B (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Completion Rate in percent A/B</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='client_kpi_table' name='federated.1di5v8305i5bav18t4v0w044l5rw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1di5v8305i5bav18t4v0w044l5rw'>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column caption='Bal' datatype='real' name='[bal]' role='measure' type='quantitative' />
+            <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+            <column caption='Clnt Tenure Mnth' datatype='real' name='[clnt_tenure_mnth]' role='measure' type='quantitative' />
+            <column caption='Completion Rate' datatype='real' name='[completion_rate]' role='measure' type='quantitative' />
+            <column-instance column='[completion_rate]' derivation='Avg' name='[diff:avg:completion_rate:qk]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Fixed' ordering-field='[federated.1di5v8305i5bav18t4v0w044l5rw].[Variation]' ordering-type='Field' type='Difference'>
+                <address>
+                  <value>&quot;Control&quot;</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[bal]' derivation='None' name='[none:bal:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_age]' derivation='None' name='[none:clnt_age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_tenure_mnth]' derivation='None' name='[none:clnt_tenure_mnth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_age:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:gendr:nk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_tenure_mnth:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:bal:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' value='151' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1di5v8305i5bav18t4v0w044l5rw].[diff:avg:completion_rate:qk]</rows>
+        <cols>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]</cols>
+      </table>
+      <simple-id uuid='{544860B6-B7F2-462A-9C11-DFBA24CDEB26}' />
+    </worksheet>
+    <worksheet name='Completion Rate in sec A/B'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Completion Rate in sec A/B</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='client_kpi_table' name='federated.1di5v8305i5bav18t4v0w044l5rw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1di5v8305i5bav18t4v0w044l5rw'>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column-instance column='[avg_time_to_completion]' derivation='Avg' name='[avg:avg_time_to_completion:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Time To Completion' datatype='real' name='[avg_time_to_completion]' role='measure' type='quantitative' />
+            <column caption='Bal' datatype='real' name='[bal]' role='measure' type='quantitative' />
+            <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+            <column caption='Clnt Tenure Mnth' datatype='real' name='[clnt_tenure_mnth]' role='measure' type='quantitative' />
+            <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[bal]' derivation='None' name='[none:bal:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_age]' derivation='None' name='[none:clnt_age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_tenure_mnth]' derivation='None' name='[none:clnt_tenure_mnth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Variation:nk]' member='&quot;Control&quot;' />
+              <groupfilter function='member' level='[none:Variation:nk]' member='&quot;Test&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_age:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:gendr:nk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_tenure_mnth:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:bal:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' value='141' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1di5v8305i5bav18t4v0w044l5rw].[avg:avg_time_to_completion:qk]</rows>
+        <cols>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]</cols>
+      </table>
+      <simple-id uuid='{93A26FDD-B284-4BD4-AC93-D66E57AB9D87}' />
+    </worksheet>
+    <worksheet name='Completion by Gender A/B'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='client_kpi_table' name='federated.1di5v8305i5bav18t4v0w044l5rw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1di5v8305i5bav18t4v0w044l5rw'>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column-instance column='[completion_rate]' derivation='Avg' name='[avg:completion_rate:qk]' pivot='key' type='quantitative' />
+            <column caption='Bal' datatype='real' name='[bal]' role='measure' type='quantitative' />
+            <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+            <column caption='Clnt Tenure Mnth' datatype='real' name='[clnt_tenure_mnth]' role='measure' type='quantitative' />
+            <column caption='Completion Rate' datatype='real' name='[completion_rate]' role='measure' type='quantitative' />
+            <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[bal]' derivation='None' name='[none:bal:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_age]' derivation='None' name='[none:clnt_age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_tenure_mnth]' derivation='None' name='[none:clnt_tenure_mnth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:bal:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_age:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_tenure_mnth:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:gendr:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.1di5v8305i5bav18t4v0w044l5rw].[none:gendr:nk] * [federated.1di5v8305i5bav18t4v0w044l5rw].[avg:completion_rate:qk])</rows>
+        <cols>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]</cols>
+      </table>
+      <simple-id uuid='{B697BF3F-062C-402B-8931-41E47D4B4099}' />
+    </worksheet>
+    <worksheet name='Frictionless Confirm A/B'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Frictionless Confirm Rate</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='client_kpi_table' name='federated.1di5v8305i5bav18t4v0w044l5rw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1di5v8305i5bav18t4v0w044l5rw'>
+            <column caption='Frictionless Confirm' datatype='real' name='[Calculation_2404906916904964]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(INT([reached_confirm])) / COUNTD([client_id])' />
+            </column>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column caption='Bal' datatype='real' name='[bal]' role='measure' type='quantitative' />
+            <column caption='Client Id' datatype='integer' name='[client_id]' role='dimension' type='ordinal' />
+            <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+            <column caption='Clnt Tenure Mnth' datatype='real' name='[clnt_tenure_mnth]' role='measure' type='quantitative' />
+            <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[bal]' derivation='None' name='[none:bal:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_age]' derivation='None' name='[none:clnt_age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_tenure_mnth]' derivation='None' name='[none:clnt_tenure_mnth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+            <column caption='Reached Confirm' datatype='boolean' name='[reached_confirm]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_2404906916904964]' derivation='User' name='[usr:Calculation_2404906916904964:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:bal:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_age:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_tenure_mnth:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:gendr:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1di5v8305i5bav18t4v0w044l5rw].[usr:Calculation_2404906916904964:qk]</rows>
+        <cols>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]</cols>
+      </table>
+      <simple-id uuid='{764F4F25-36A5-4427-B2F4-37930A1265A3}' />
+    </worksheet>
+    <worksheet name='Max. Steps per Client A/B '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Maximum Steps per Client</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='client_kpi_table' name='federated.1di5v8305i5bav18t4v0w044l5rw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1di5v8305i5bav18t4v0w044l5rw'>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column-instance column='[max_step_client]' derivation='Avg' name='[avg:max_step_client:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[session_per_client]' derivation='Avg' name='[avg:session_per_client:qk]' pivot='key' type='quantitative' />
+            <column caption='Bal' datatype='real' name='[bal]' role='measure' type='quantitative' />
+            <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+            <column caption='Clnt Tenure Mnth' datatype='real' name='[clnt_tenure_mnth]' role='measure' type='quantitative' />
+            <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+            <column caption='Max Step Client' datatype='integer' name='[max_step_client]' role='measure' type='quantitative' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[bal]' derivation='None' name='[none:bal:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_age]' derivation='None' name='[none:clnt_age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_tenure_mnth]' derivation='None' name='[none:clnt_tenure_mnth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+            <column caption='Session Per Client' datatype='integer' name='[session_per_client]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1di5v8305i5bav18t4v0w044l5rw].[:Measure Names]'>
+            <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1di5v8305i5bav18t4v0w044l5rw].[avg:session_per_client:qk]&quot;' user:op='manual' />
+          </filter>
+          <slices>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[:Measure Names]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_age:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:gendr:nk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_tenure_mnth:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:bal:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1di5v8305i5bav18t4v0w044l5rw].[:Measure Names]' value='248' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1di5v8305i5bav18t4v0w044l5rw].[avg:max_step_client:qk]</rows>
+        <cols>([federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk] / [federated.1di5v8305i5bav18t4v0w044l5rw].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{1C330BCD-2CA1-4E6C-98A9-AC1EC0501D41}' />
+    </worksheet>
+    <worksheet name='Sessions per Client A/B'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Number of Sessions per Client</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='client_kpi_table' name='federated.1di5v8305i5bav18t4v0w044l5rw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1di5v8305i5bav18t4v0w044l5rw'>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column-instance column='[session_per_client]' derivation='Avg' name='[avg:session_per_client:qk]' pivot='key' type='quantitative' />
+            <column caption='Bal' datatype='real' name='[bal]' role='measure' type='quantitative' />
+            <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+            <column caption='Clnt Tenure Mnth' datatype='real' name='[clnt_tenure_mnth]' role='measure' type='quantitative' />
+            <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[bal]' derivation='None' name='[none:bal:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_age]' derivation='None' name='[none:clnt_age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_tenure_mnth]' derivation='None' name='[none:clnt_tenure_mnth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+            <column caption='Session Per Client' datatype='integer' name='[session_per_client]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_age:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:gendr:nk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_tenure_mnth:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:bal:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1di5v8305i5bav18t4v0w044l5rw].[:Measure Names]' value='248' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1di5v8305i5bav18t4v0w044l5rw].[avg:session_per_client:qk]</rows>
+        <cols>([federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk] / [federated.1di5v8305i5bav18t4v0w044l5rw].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{041AB6FD-521D-49A4-A40F-1A020EC2CD49}' />
+    </worksheet>
+    <worksheet name='Time per Step in sec A/B'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Avg. Time Spent per Step A/B</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='client_kpi_table' name='federated.1di5v8305i5bav18t4v0w044l5rw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1di5v8305i5bav18t4v0w044l5rw'>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column-instance column='[time_on_each_step]' derivation='Avg' name='[avg:time_on_each_step:qk]' pivot='key' type='quantitative' />
+            <column caption='Bal' datatype='real' name='[bal]' role='measure' type='quantitative' />
+            <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+            <column caption='Clnt Tenure Mnth' datatype='real' name='[clnt_tenure_mnth]' role='measure' type='quantitative' />
+            <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[bal]' derivation='None' name='[none:bal:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_age]' derivation='None' name='[none:clnt_age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_tenure_mnth]' derivation='None' name='[none:clnt_tenure_mnth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+            <column caption='Time On Each Step' datatype='real' name='[time_on_each_step]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Variation:nk]' />
+              <groupfilter function='member' level='[none:Variation:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_age:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:gendr:nk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_tenure_mnth:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:bal:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' value='150' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1di5v8305i5bav18t4v0w044l5rw].[avg:time_on_each_step:qk]</rows>
+        <cols>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]</cols>
+      </table>
+      <simple-id uuid='{F0E69BBF-8A5C-43B5-97FF-18CC625A2A7A}' />
+    </worksheet>
+    <worksheet name='Time to Completion A/B'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Time to Completion (in Seconds)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='client_kpi_table' name='federated.1di5v8305i5bav18t4v0w044l5rw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1di5v8305i5bav18t4v0w044l5rw'>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column-instance column='[avg_time_to_completion]' derivation='Avg' name='[avg:avg_time_to_completion:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Time To Completion' datatype='real' name='[avg_time_to_completion]' role='measure' type='quantitative' />
+            <column caption='Bal' datatype='real' name='[bal]' role='measure' type='quantitative' />
+            <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+            <column caption='Clnt Tenure Mnth' datatype='real' name='[clnt_tenure_mnth]' role='measure' type='quantitative' />
+            <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[bal]' derivation='None' name='[none:bal:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_age]' derivation='None' name='[none:clnt_age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_tenure_mnth]' derivation='None' name='[none:clnt_tenure_mnth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_age:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:gendr:nk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:clnt_tenure_mnth:qk]</column>
+            <column>[federated.1di5v8305i5bav18t4v0w044l5rw].[none:bal:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1di5v8305i5bav18t4v0w044l5rw].[:Measure Names]' value='247' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1di5v8305i5bav18t4v0w044l5rw].[avg:avg_time_to_completion:qk]</rows>
+        <cols>([federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk] / [federated.1di5v8305i5bav18t4v0w044l5rw].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{F01B9608-F1AD-4789-895D-AC885728A899}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='DASH A/B behav'>
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98018' id='12' param='horz' type-v2='layout-flow' w='97538' x='1231' y='991'>
+            <zone h='98018' id='8' param='vert' type-v2='layout-flow' w='53384' x='1231' y='991'>
+              <zone h='98018' id='3' param='horz' type-v2='layout-flow' w='53384' x='1231' y='991'>
+                <zone h='98018' id='5' param='vert' type-v2='layout-flow' w='53384' x='1231' y='991'>
+                  <zone h='98018' id='9' type-v2='layout-basic' w='53384' x='1231' y='991'>
+                    <zone h='98018' id='10' name='Completion Rate in % A/B' w='53384' x='1231' y='991'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+            <zone fixed-size='287' h='98018' id='11' is-fixed='true' param='vert' type-v2='layout-flow' w='44154' x='54615' y='991'>
+              <zone h='10409' id='13' name='Completion Rate in % A/B' pane-specification-id='0' param='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' type-v2='color' w='44154' x='54615' y='991'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='36183' id='14' name='Sessions per Client A/B' w='43846' x='54923' y='18835' />
+        <zone h='35068' id='15' name='Max. Steps per Client A/B ' w='43077' x='55538' y='57869' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='950' minheight='950' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='25' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='24' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+                <zone fixed-size='280' h='98018' id='10' is-fixed='true' name='Completion Rate in % A/B' w='53384' x='1231' y='991'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='10409' id='13' name='Completion Rate in % A/B' pane-specification-id='0' param='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' type-v2='color' w='44154' x='54615' y='991'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36183' id='14' is-fixed='true' name='Sessions per Client A/B' w='43846' x='54923' y='18835'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='35068' id='15' is-fixed='true' name='Max. Steps per Client A/B ' w='43077' x='55538' y='57869'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{866F424C-AC78-4BBF-8228-65DC7A66EB0E}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='DASH A/B demo'>
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <zones>
+        <zone h='32218' id='5' name='Avg Age A/B' w='39231' x='1692' y='4337' />
+        <zone h='9418' id='6' name='Avg Age A/B' pane-specification-id='0' param='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' type-v2='color' w='21538' x='36000' y='1363' />
+        <zone h='33333' id='7' name='Avg Balance A/B' w='40154' x='54308' y='4585' />
+        <zone h='33333' id='9' name='Avg Tenure A/B' w='87846' x='5385' y='40025' />
+        <zone h='24659' id='11' name='Completion Rate in % A/B' w='91077' x='4000' y='72862' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1150' minheight='1150' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='15' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98018' id='14' param='vert' type-v2='layout-flow' w='97538' x='1231' y='991'>
+                <zone fixed-size='277' h='32218' id='5' is-fixed='true' name='Avg Age A/B' w='39231' x='1692' y='4337'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9418' id='6' name='Avg Age A/B' pane-specification-id='0' param='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' type-v2='color' w='21538' x='36000' y='1363'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='33333' id='7' is-fixed='true' name='Avg Balance A/B' w='40154' x='54308' y='4585'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='33333' id='9' is-fixed='true' name='Avg Tenure A/B' w='87846' x='5385' y='40025'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='212' h='24659' id='11' is-fixed='true' name='Completion Rate in % A/B' w='91077' x='4000' y='72862'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{09C2B5C6-E947-48F4-B335-FB684F0DF96E}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='69'>
+    <window class='worksheet' name='Avg Step Error A/B'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6378B7D5-CB21-4886-9391-6567F0FC1CA1}' />
+    </window>
+    <window class='worksheet' name='Sessions per Client A/B'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='4' param='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-height' />
+      </viewpoint>
+      <simple-id uuid='{F5289CF1-3231-4A62-A2B3-2984966FF7F0}' />
+    </window>
+    <window class='worksheet' name='Time per Step in sec A/B'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E10BAD2E-51F4-46C4-9911-C20E238328E7}' />
+    </window>
+    <window class='worksheet' name='Max. Steps per Client A/B '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='6' param='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-height' />
+      </viewpoint>
+      <simple-id uuid='{29FBCBC3-4C6E-4F91-ACB0-2505A7580B6D}' />
+    </window>
+    <window class='worksheet' name='Completion Rate in % A/B (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8D4284A0-3A3C-4600-80BF-69F1FFA791C3}' />
+    </window>
+    <window class='worksheet' name='Time to Completion A/B'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='5' param='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-height' />
+      </viewpoint>
+      <simple-id uuid='{562D51EA-E11E-4EC4-A641-B91534AA1D39}' />
+    </window>
+    <window class='worksheet' name='Completion Rate in sec A/B'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='4' param='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DFCD40EB-F460-42EE-A7B9-7D4F16E78B22}' />
+    </window>
+    <window class='worksheet' name='Avg Step Error A/B.'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{606B2723-68DC-4A20-9446-A44A407BE586}' />
+    </window>
+    <window class='worksheet' name='Completion Rate in % A/B'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{372FA06F-A845-43EE-8E3A-D5E78B05FE05}' />
+    </window>
+    <window class='worksheet' name='Frictionless Confirm A/B'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{290DB693-9947-4CC8-BBC2-570ABEC7E330}' />
+    </window>
+    <window class='dashboard' name='DASH A/B behav'>
+      <viewpoints>
+        <viewpoint name='Completion Rate in % A/B'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Max. Steps per Client A/B '>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sessions per Client A/B'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{9630C565-9B88-44CA-AF03-44DC788C88AD}' />
+    </window>
+    <window class='worksheet' name='Completion by Gender A/B'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BF407216-2839-4A58-A1B5-0A66484E85F8}' />
+    </window>
+    <window class='worksheet' name='Avg Balance A/B'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3AFE5EAF-C1F7-4F47-B44B-99EC51663F4C}' />
+    </window>
+    <window class='worksheet' name='Avg Age A/B'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3AD8652A-2C30-4468-8C2E-80CB96E50D51}' />
+    </window>
+    <window class='worksheet' name='Avg Tenure A/B'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1di5v8305i5bav18t4v0w044l5rw].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8ECF75CF-07F8-44CF-B1B9-83B4CBA31FE7}' />
+    </window>
+    <window class='dashboard' maximized='true' name='DASH A/B demo'>
+      <viewpoints>
+        <viewpoint name='Avg Age A/B'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Avg Balance A/B'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Avg Tenure A/B'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Completion Rate in % A/B'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{AB78A254-05D5-47A8-9B92-E1344566FA1E}' />
+    </window>
+  </windows>
+</workbook>

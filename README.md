@@ -79,7 +79,7 @@ Python helper/function files used in the analysis workflow.
 
 # Tableau Dashboard
 
-[Insert Tableau Public Link Here]
+(https://public.tableau.com/app/profile/anwen.roberts/viz/Vanguard_DASHBOARD_Ravenclaw/DASHABdemo)
 
 ---
 
